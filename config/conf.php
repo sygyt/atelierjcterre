@@ -1,10 +1,16 @@
 <?php
 class conf{
+
+	private $h = getenv('HOST');
+	private $d = getenv('DATABASE');
+	private $u = getenv('USERNAME');
+	private $p = getenv('PASSWORD');
+	
 	static private $databases = array(
-		'hostname' => 'dz8959rne9lumkkw.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',//getenv('HOST'),
-		'database' => 'gv1zux3l9t7ejpgr',//getenv('DATABASE'),
-		'login' => 'forvu5bfe69cewih',//getenv('USERNAME'),
-		'password' => 'iadnzx9gnluxwgx8'//getenv('PASSWORD')
+		'hostname' => $h,//getenv('HOST'),
+		'database' => $d,//getenv('DATABASE'),
+		'login' => $u,//getenv('USERNAME'),
+		'password' => $p//getenv('PASSWORD')
 	);
 
 	static public function getLogin(){
