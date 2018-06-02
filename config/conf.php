@@ -1,10 +1,10 @@
 <?php
 class conf{
 	static private $databases = array(
-		'hostname' => 'localhost',
-		'database' => 'projet_web_bd',
-		'login' => 'root',
-		'password' => ''
+		'hostname' => getenv('HOST'),
+		'database' => getenv('DATABASE'),
+		'login' => getenv('USERNAME'),
+		'password' => getenv('PASSWORD')
 	);
 
 	static public function getLogin(){
