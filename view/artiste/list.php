@@ -1,6 +1,9 @@
 <div class="container">
 	<div class="row">
 		<?php var_dump($_ENV['database']);
+			var_dump(getenv('password'));
+			var_dump($_ENV['username']);
+			var_dump(getenv('host'));
 			foreach ($tab_a as $i =>$v){
 			$idArtiste = $v->getIdArtiste();
 			$artisteNom = $v->getArtisteNom();
