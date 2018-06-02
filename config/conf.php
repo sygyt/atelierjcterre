@@ -1,11 +1,12 @@
 <?php
 class conf{
 
-	private $h = getenv('HOST');
-	private $d = getenv('DATABASE');
-	private $u = getenv('USERNAME');
-	private $p = getenv('PASSWORD');
 	
+	private $h = $_ENV['HOST'];
+	private $d = $_ENV['DATABASE'];
+	private $u = $_ENV['USERNAME'];
+	private $p = $_ENV['PASSWORD'];
+
 	static private $databases = array(
 		'hostname' => $h,//getenv('HOST'),
 		'database' => $d,//getenv('DATABASE'),
