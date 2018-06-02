@@ -1,16 +1,18 @@
 <div class="container">
 	<div class="row">
-		<?php foreach ($tab_a as $i =>$v){
+		<?php var_dump($_ENV['database']);
+			foreach ($tab_a as $i =>$v){
 			$idArtiste = $v->getIdArtiste();
 			$artisteNom = $v->getArtisteNom();
 			$artistePrenom = $v->getArtistePrenom();
 			$artisteDescription = $v->getArtisteDescription();
 			$artistePhoto1 = $v->getArtistePhoto1();
 			$nbOeuvre = $v->getNbOeuvre();
+
 			?>
 				<div class="col-lg-4 col-md-6 mt-2">
 					<div class="card" style="width: 100%; height: 430px;">
-						<img class="card-img-top mx-auto img-fluid" style="height: 230px; width: 230px;" src="<?php echo $artistePhoto1 ?>" alt="Photo de l'artiste">
+						<img class="card-img-top mx-auto " style="height: 230px; width: 230px;" src="<?php echo $artistePhoto1 ?>" alt="Photo de l'artiste">
 						<div class="card-body text-center">
 							<h5 class="card-title"> <?php echo htmlspecialchars($idArtiste) ?></h5>
 							<h6 class="card-subtitle mb-2 text-muted"> <?php echo htmlspecialchars($artistePrenom); echo htmlspecialchars($artisteNom)?> </h6>
