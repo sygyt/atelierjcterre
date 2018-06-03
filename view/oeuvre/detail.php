@@ -36,7 +36,7 @@
           <li class="page-item"><a class="btn btn-light btn-lg" data-toggle="collapse" href="#Photo3" role="button" aria-expanded="false" aria-controls="collapseExample">
             Photo3
           </a></li>
-          <li class="page-item"><a class="btn btn-light btn-lg" data-toggle="collapse" href="Photo4" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <li class="page-item"><a class="btn btn-light btn-lg" data-toggle="collapse" href="#Photo4" role="button" aria-expanded="false" aria-controls="collapseExample">
             Photo4
           </a></li>
         </ul>
