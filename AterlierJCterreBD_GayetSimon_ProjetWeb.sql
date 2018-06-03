@@ -11,6 +11,28 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+/*
+TRIGGER : 
+DROP TRIGGER IF EXISTS `add_present`;
+
+CREATE TRIGGER `add_present`   
+BEFORE INSERT ON `exposition`
+FOR EACH ROW
+begin
+	insert into present(idArtiste, idExposition) values (NEW.idArtiste, NEW.idExposition)
+end;
+
+create or replace trigger increase_nbo after insert on oeuvre
+for each row
+declare 
+nb_oeuvre number;
+begin
+select into nb_oeuvre from artiste where artiste.idArtiste = NEW.idArtiste;
+nb_oeuvre := nb_oeuvre +1;
+update 'artiste' set nbOeuvre = nb_oeuvre where artiste.idArtiste = NEW.idArtiste;
+end;
+*/
+
 
 -- Export de la structure de la base pour gv1zux3l9t7ejpgr
 CREATE DATABASE IF NOT EXISTS `gv1zux3l9t7ejpgr` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
