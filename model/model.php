@@ -21,4 +21,3 @@ class model{
 }
 
 model::init();
-var_dump(getenv('username'));
