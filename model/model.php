@@ -3,7 +3,6 @@ require_once(File::build_path(array("config", "conf.php")));
 
 class model{
   public static $pdo;
-  public 
 
   public static function init(){
     $login = conf::getLogin();
