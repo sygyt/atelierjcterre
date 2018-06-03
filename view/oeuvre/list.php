@@ -1,7 +1,7 @@
 <?php if($isConnect) { ?>
 <div class="row">
 	<div class="col-lg-12 col-md-12 mt-2 text-center">
-		<a href="index?controller=oeuvre&action=add" class="btn btn-outline-secondary btn-lg mt-1 ml-2 mr-2 " role="button" aria-pressed="true">Ajouter une oeuvre</a>
+		<a href="index.php?controller=oeuvre&action=add" class="btn btn-outline-secondary btn-lg mt-1 ml-2 mr-2 " role="button" aria-pressed="true">Ajouter une oeuvre</a>
 	</div>
 </div>
 <?php } ?>
@@ -25,7 +25,7 @@
 						<h5 class="card-title"> <?php echo htmlspecialchars($oeuvreName) ?> réalisé par <?php echo htmlspecialchars($idArtiste) ?> </h5>
 						<p class="card-text"> <?php echo htmlspecialchars($oeuvreDescription)  ?> </p>
 					</div>
-					<a href="index?controller=oeuvre&action=read&oeuvre=<?php echo $idOeuvre?>" class="btn btn-light">Voir l'oeuvre</a>
+					<a href="index.php?controller=oeuvre&action=read&oeuvre=<?php echo $idOeuvre?>" class="btn btn-light">Voir l'oeuvre</a>
 				</div>
 			</div>
 		<?php }	?>

@@ -41,7 +41,7 @@
 						</div>
 					</div>
 
-					<a href="index?controller=exposition&action=delete&exposition=<?php echo $idExposition?>" class="btn btn-light">Supprimer l'exposition</a>
+					<a href="index.php?controller=exposition&action=delete&exposition=<?php echo $idExposition?>" class="btn btn-light">Supprimer l'exposition</a>
 
 				<?php } ?>
 			<?php } ?>
@@ -68,7 +68,7 @@
 								<td> <?php echo $artisteNom ?> </td>
 								<td> <?php echo $artistePrenom ?> </td>
 								<td>
-									<a href="index?controller=artiste&action=read&artiste=<?php echo $idArtiste?>" > <?php echo ("@".$idArtiste) ?> </a>
+									<a href="index.php?controller=artiste&action=read&artiste=<?php echo $idArtiste?>" > <?php echo ("@".$idArtiste) ?> </a>
 								</td>
 							</tr>
 							<?php if ($idArtiste==$idArtisteOnPage){
@@ -80,9 +80,9 @@
 			</div>
 			<?php if($isConnect) { 
 				if($participe) { ?>
-					<a href="index?controller=present&action=delete&exposition=<?php echo $idExposition ?>" class="btn btn-light text-danger">Ne plus participer</a>	
+					<a href="index.php?controller=present&action=delete&exposition=<?php echo $idExposition ?>" class="btn btn-light text-danger">Ne plus participer</a>	
 				<?php } else { ?>
-					<a href="index?controller=present&action=add&exposition=<?php echo $idExposition?>" class="btn btn-light">participer à l'exposition</a>	
+					<a href="index.php?controller=present&action=add&exposition=<?php echo $idExposition?>" class="btn btn-light">participer à l'exposition</a>	
 				<?php } ?>
 			<?php } ?>
 		</div>

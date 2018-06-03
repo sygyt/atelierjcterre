@@ -83,7 +83,7 @@
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<a type="button" class="btn btn-danger" href="index?controller=oeuvre&action=delete&oeuvre=<?php echo $idOeuvre?>">Supprimer</a>
+									<a type="button" class="btn btn-danger" href="index.php?controller=oeuvre&action=delete&oeuvre=<?php echo $idOeuvre?>">Supprimer</a>
 								</div>
 							</div>
 						</div>

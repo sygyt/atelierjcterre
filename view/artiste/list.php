@@ -15,10 +15,10 @@
 						<img class="card-img-top mx-auto " style="height: 230px; width: 230px;" src="<?php echo $artistePhoto1 ?>" alt="Photo de l'artiste">
 						<div class="card-body text-center">
 							<h5 class="card-title"> <?php echo htmlspecialchars($idArtiste) ?></h5>
-							<h6 class="card-subtitle mb-2 text-muted"> <?php echo htmlspecialchars($artistePrenom); echo htmlspecialchars($artisteNom)?> </h6>
+							<h6 class="card-subtitle mb-2 text-muted"> <?php echo(htmlspecialchars($artistePrenom)."  "); echo htmlspecialchars($artisteNom)?> </h6>
 							<p class="card-text"> <?php echo htmlspecialchars($artisteDescription)  ?> </p>
 						</div>	
-						<a href="index?controller=oeuvre&action=readOneArtiste&artiste=<?php echo $idArtiste?>" class="btn btn-light">Voir les Oeuvres (<?php echo htmlspecialchars($nbOeuvre)?>)</a>
+						<a href="index.php?controller=oeuvre&action=readOneArtiste&artiste=<?php echo $idArtiste?>" class="btn btn-light">Voir les Oeuvres (<?php echo htmlspecialchars($nbOeuvre)?>)</a>
 					</div>	
 				</div>
 

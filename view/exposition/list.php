@@ -1,7 +1,7 @@
 <?php if($isConnect) { ?>
 <div class="row">
 	<div class="col-lg-12 col-md-12 mt-2 text-center">
-		<a href="index?controller=exposition&action=add" class="btn btn-outline-secondary btn-lg mt-1 ml-2 mr-2 " role="button" aria-pressed="true">Ajouter une exposition</a>
+		<a href="index.php?controller=exposition&action=add" class="btn btn-outline-secondary btn-lg mt-1 ml-2 mr-2 " role="button" aria-pressed="true">Ajouter une exposition</a>
 	</div>
 </div>
 <?php } ?>
@@ -23,12 +23,12 @@
 					</div>
 					<?php if($isConnect) { 
 						if($idArtiste==$idArtisteOnPage) { ?>
-							<a href="index?controller=exposition&action=delete&exposition=<?php echo $idExposition?>" class="btn btn-light">Supprimer l'exposition</a>	
+							<a href="index.php?controller=exposition&action=delete&exposition=<?php echo $idExposition?>" class="btn btn-light">Supprimer l'exposition</a>	
 						<?php } else { ?>
-							<a href="index?controller=present&action=add&exposition=<?php echo $idExposition?>" class="btn btn-light">participer à l'exposition</a>	
+							<a href="index.php?controller=present&action=add&exposition=<?php echo $idExposition?>" class="btn btn-light">participer à l'exposition</a>	
 						<?php } ?>
 					<?php } ?>
-					<a href="index?controller=exposition&action=read&exposition=<?php echo $idExposition?>" class="btn btn-light">Plus d'info</a> 
+					<a href="index.php?controller=exposition&action=read&exposition=<?php echo $idExposition?>" class="btn btn-light">Plus d'info</a> 
 				</div>
 			</div>
 		<?php }	?>
