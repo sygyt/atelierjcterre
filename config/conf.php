@@ -13,19 +13,19 @@ class conf{
 	);
 
 	static public function getLogin(){
-		return self::$databases['login'];
+		return $this->$databases['login'];
 	}
 
 	static public function getHostname(){
-		return self::$databases['hostname'];
+		return $this->$databases['hostname'];
 	}
 
 	static public function getDatabase(){
-		return self::$databases['database'];
+		return $this->$databases['database'];
 	}
 
 	static public function getPassword(){
-		return self::$databases['password'];
+		return $this->databases['password'];
 	}
 
 	static private $debug = true;
