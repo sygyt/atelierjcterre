@@ -2,19 +2,11 @@
 //this function take $dir is string oeuvre or artist (folder in image folder), id of $dir int, nb of picture (allwais 1 for artiste). 
 //this function return an array with error msg and boolean for success of upload
 function upload_file($dir,$id,$nb){
-	require_once(File::build_path(array('resources','cloudinary','src','Cloudinary.php')));
-	require_once(File::build_path(array('resources','cloudinary','src','Uploader.php')));
-	require_once(File::build_path(array('resources','cloudinary','src','Api.php')));
-	Cloudinary::config(array( 
-  	"cloud_name" => "hwgpogvyr", 
-  	"api_key" => "445884272793916", 
-  	"api_secret" => "oYfpumWl7cgHx3fV5gI5u-eRQcg" 
-	));
 	$fileIndex = $dir."Photo".$nb; //non dans la methode post (files)
 	//$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	$fileExtension = strtolower(  substr(  strrchr($_FILES[$fileIndex]['name'],'.')  ,1)  );
 	//$fileExtension = $_FILES[$fileIndex]['type'];
-	$image_name = $dir.$id.$nb ;//.".".$fileExtension ; //nom de l'image
+	$image_name = $dir.$id.$nb.".".$fileExtension ; //nom de l'image
 	$target_file = File::build_path(array("resources", "img",$dir,$image_name)); //chemin de la racine a l'image
 	$d_s = DIRECTORY_SEPARATOR; 
 	$bdName = "resources".$d_s."img".$d_s.$dir.$d_s.$image_name; //nom du fichier dans la base de donne
@@ -56,15 +48,12 @@ function upload_file($dir,$id,$nb){
 		$res = false;
 	// if everything is ok, try to upload file
 	} else {
-		//$res = \Cloudinary\Uploader::upload($_FILES[$fileIndex]["tmp_name"]);
-		$data = \Cloudinary\Uploader::upload($_FILES[$fileIndex]["tmp_name"],array("folder" => "projetWeb/".$dir."/".$id.$nb."/"));//
-		/*if (move_uploaded_file($_FILES[$fileIndex]["tmp_name"], $target_file)) {
-			$msg = $res2['url'];
+		if (move_uploaded_file($_FILES[$fileIndex]["tmp_name"], $target_file)) {
+			$msg = $bdName;
 		} else {
 			$msg = $msg ."Sorry, there was an error uploading your file.";
 			$res = false; 
-		}*/
-		$msg=$data['url'];
+		}
 	}
 	$res_tab = array(
 				'success' => $res,
