@@ -2,7 +2,7 @@
 require_once(File::build_path(array("config", "conf.php")));
 
 class model{
-  public  $pdo;
+  static public $pdo;
 
   static public function init(){
     $login = getenv('username');
