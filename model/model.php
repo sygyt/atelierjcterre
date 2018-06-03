@@ -3,10 +3,10 @@ require_once(File::build_path(array("config", "conf.php")));
 
 class model{
   public static $pdo;
-  public $login = getenv('username');
+  public 
 
   public static function init(){
-    
+    $login = conf::getLogin();
     $hostname = conf::getHostname();
     $database_name = conf::getDatabase();
     $password = conf::getPassword();
