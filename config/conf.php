@@ -5,7 +5,7 @@ class conf{
 	 $d = getenv('database');
 	 $u = getenv('username');
 	 $p = getenv('password');*/
-	private $databases = array(
+	static private $databases = array(
 		'hostname' => 'dz8959rne9lumkkw.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',//getenv('HOST'),
 		'database' => 'gv1zux3l9t7ejpgr',//getenv('DATABASE'),
 		'login' => 'forvu5bfe69cewih',//getenv('USERNAME'),
@@ -13,19 +13,19 @@ class conf{
 	);
 
 	static public function getLogin(){
-		return $this->$databases['login'];
+		return self::$databases['login'];
 	}
 
 	static public function getHostname(){
-		return getenv('host');
+		return self::$databases['hostname'];
 	}
 
 	static public function getDatabase(){
-		return $this->$databases['database'];
+		return self::$databases['database'];
 	}
 
 	static public function getPassword(){
-		return $this->databases['password'];
+		return self::$databases['password'];
 	}
 
 	static private $debug = true;
